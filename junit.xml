@@ -1,0 +1,27 @@
+<testsuites name="jest tests" tests="6" failures="1" time="0.746">
+  <testsuite name="Hacker Dormitory" errors="0" failures="1" skipped="0" timestamp="2022-01-21T06:22:12" time="0.746" tests="6">
+    <testcase classname="Hacker Dormitory should add valid students in Residents list" name="Hacker Dormitory should add valid students in Residents list" time="0.029">
+    </testcase>
+    <testcase classname="Hacker Dormitory should add valid students without case sensitivity" name="Hacker Dormitory should add valid students without case sensitivity" time="0.004">
+    </testcase>
+    <testcase classname="Hacker Dormitory should clear the input fields after adding a new student" name="Hacker Dormitory should clear the input fields after adding a new student" time="0.007">
+      <failure>Error: expect(received).toEqual(expected) // deep equality
+
+Expected: &quot;&quot;
+Received: &quot;Adam&quot;
+    at Object.&lt;anonymous&gt; (/Users/zeeshanahmed/Downloads/hacker_dormitory/src/App.test.js:60:28)
+    at Object.asyncJestTest (/Users/zeeshanahmed/Downloads/hacker_dormitory/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/zeeshanahmed/Downloads/hacker_dormitory/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/zeeshanahmed/Downloads/hacker_dormitory/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/zeeshanahmed/Downloads/hacker_dormitory/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (node:internal/process/task_queues:94:5)</failure>
+    </testcase>
+    <testcase classname="Hacker Dormitory should show error on trying to add a student who is not in the list" name="Hacker Dormitory should show error on trying to add a student who is not in the list" time="0.006">
+    </testcase>
+    <testcase classname="Hacker Dormitory should show error on trying to add a student whose validity has expired" name="Hacker Dormitory should show error on trying to add a student whose validity has expired" time="0.004">
+    </testcase>
+    <testcase classname="Hacker Dormitory should hold the correct list and error message after series of Students addition" name="Hacker Dormitory should hold the correct list and error message after series of Students addition" time="0.01">
+    </testcase>
+  </testsuite>
+</testsuites>
