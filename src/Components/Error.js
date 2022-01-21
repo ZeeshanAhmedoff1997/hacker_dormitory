@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types"; // ES6
 
 function Error({ error }) {
   return (
@@ -14,5 +15,7 @@ function Error({ error }) {
     </>
   );
 }
-
+Error.prototype = {
+  error: PropTypes.string,
+};
 export default Error;

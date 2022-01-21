@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types"; // ES6
 
 function ResidentsList({ residents }) {
   return (
@@ -14,5 +15,8 @@ function ResidentsList({ residents }) {
     </div>
   );
 }
+ResidentsList.prototype = {
+  residents: PropTypes.array,
+};
 
 export default ResidentsList;

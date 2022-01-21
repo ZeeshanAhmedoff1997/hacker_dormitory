@@ -1,6 +1,7 @@
 import React from "react";
 import { STUDENTS } from "../studentsList";
 // `joiningDate` && `validityDate` format "yyyy-mm-dd"
+import PropTypes from "prop-types"; // ES6
 
 export function checkValidity(joiningDate, validityDate) {
   const now = new Date();
@@ -60,5 +61,9 @@ function Search({ handleChange, handleSubmit }) {
     </div>
   );
 }
+Search.prototype = {
+  handleChange: PropTypes.func,
+  handleSubmit: PropTypes.func,
+};
 
 export default Search;
