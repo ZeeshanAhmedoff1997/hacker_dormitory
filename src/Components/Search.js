@@ -21,7 +21,7 @@ export function checkStudentName(studentName) {
   }
 }
 
-function Search({ handleChange, handleSubmit }) {
+function Search({ handleChange, handleSubmit, formData }) {
   return (
     <div className="my-50 layout-row align-items-end justify-content-end">
       <label htmlFor="studentName">
@@ -33,6 +33,7 @@ function Search({ handleChange, handleSubmit }) {
             type="text"
             className="mr-30 mt-10"
             name="studentName"
+            value={formData.studentName}
             onChange={handleChange}
           />
         </div>
@@ -46,6 +47,7 @@ function Search({ handleChange, handleSubmit }) {
             type="date"
             className="mr-30 mt-10"
             name="joiningDate"
+            value={formData.joiningDate}
             onChange={handleChange}
           />
         </div>
@@ -64,6 +66,7 @@ function Search({ handleChange, handleSubmit }) {
 Search.prototype = {
   handleChange: PropTypes.func,
   handleSubmit: PropTypes.func,
+  formData: PropTypes.object,
 };
 
 export default Search;

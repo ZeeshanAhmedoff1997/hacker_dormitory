@@ -26,6 +26,14 @@ function App() {
     });
   };
 
+  const resettingState = () => {
+    setError();
+    updateFormData({
+      studentName: "",
+      joiningDate: "",
+    });
+  };
+
   const handleSubmit = (e) => {
     const { studentName, joiningDate } = formData;
     e.preventDefault();
@@ -41,13 +49,18 @@ function App() {
       return;
     }
     setResidents([...residents, student.name]);
+    resettingState();
   };
 
   return (
     <div className="App">
       <h8k-navbar header={title}></h8k-navbar>
       <div className="layout-column justify-content-center align-items-center w-50 mx-auto">
-        <Search handleChange={handleChange} handleSubmit={handleSubmit} />
+        <Search
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+          formData={formData}
+        />
         <Error error={error} />
         <ResidentsList residents={residents} />
       </div>
